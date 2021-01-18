@@ -1,3 +1,32 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#tasks {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+#tasks i {
+  margin: 0.5em;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}
+#tasks .additional .last-updated-text {
+  font-size: 12px;
+}
+
+#tasklist {
+  list-style: none;
+}
+

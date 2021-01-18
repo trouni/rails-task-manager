@@ -1,3 +1,11 @@
-<h1><%= @task.title %></h1>
-<p><%= @task.details %></p>
-<p><%= @task.completed %></p>
+<div class="shadow rounded bg-white p-3">
+  <div class="d-flex justify-content-between">
+    <h1><%= link_to content_tag(:i, nil, class: "m-2 far fa-#{'check-' if @task.completed?}square"), complete_task_path(@task), method: :put %> <%= @task.title %></h1>
+    <div class="actions">
+      <%= link_to content_tag(:i, nil, class: "far fa-edit"), edit_task_path(@task) %>
+      <%= link_to content_tag(:i, nil, class: "far fa-trash-alt"), delete_task_path(@task), method: :delete %>
+    </div>
+  </div>
+  <p class="card-text"><%= @task.details %></p>
+  <p class="card-text"><small class="text-muted">Last updated <%= distance_of_time_in_words(Time.now - @task.updated_at) %> ago</small></p>
+</div>

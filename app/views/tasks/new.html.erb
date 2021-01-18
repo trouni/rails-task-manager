@@ -1,0 +1,9 @@
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div>
+  <% end %>
+<% end %>
+
+<%= render "form" %>

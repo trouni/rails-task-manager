@@ -12,6 +12,22 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav id="navbar" class="bg-light p-3 mb-5">
+      <div class="container">
+        <ul id="tasklist" class="d-flex justify-content-between p-0">
+          <li class="">
+            <%= link_to "Tasks list", tasks_path, class: "btn btn-secondary my-2 my-sm-0" %>
+          </li>
+          <li class="">
+            <%= link_to "Add a new task", new_task_path, class: "btn btn-primary my-2 my-sm-0" %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
